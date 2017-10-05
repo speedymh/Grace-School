@@ -14,7 +14,7 @@ h3
     font-weight: 700
 
 *
-  z-index: 2
+  z-index: 1
 
 html, body
   font-family: myfont
@@ -53,11 +53,7 @@ body
 
       content: ' '
 
-    .wrapper-header
-      max-width: 890px
-      text-align: center
-
-    menu
+    .primary
       position: fixed
       top: 0px
 
@@ -94,22 +90,32 @@ body
 
           margin: 10px 0
 
-        ul
+        .primary-list
           list-style: none
-          display:  flex
+          display: flex
           justify-content: space-between
           align-items: baseline
 
-          li
+          margin: 0
+
+          > li
             position: relative
 
             margin-left: 40px
+
+            height: 70px
+
+            display: flex
+            align-items: center
+            justify-content: center
 
             font-weight: 400
             color: black
 
             cursor: pointer
             transition: all .2s ease-in-out
+
+            // except for border-bottom
 
             &.menu-normal
               letter-spacing: normal
@@ -118,12 +124,16 @@ body
                 font-weight: 700
                 color: darkorange
                 letter-spacing: -.1px
+                height: 68px
+                border-bottom: 2px solid darkorange
 
             &.menu-login
               border: none
                 radius: 3px
 
-              padding: 5px 15px
+              padding: 5px 17px
+
+              height: 20px
 
               color: white
               font-size: .9em
@@ -132,7 +142,57 @@ body
               &:hover
                 background: rgb(90, 184, 233)
 
+    .secondary
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 999
+
+      .secondary-list
+        position: absolute
+        top: 2px
+        left: 0
+
+        margin: 0
+        padding: 10px 0 !important
+
+        width: 100vw
+
+        background: white
+
+        color: darken(darkgrey, 30%)
+
+        box-shadow: 0px 5px 20px rgba(0,0,0,.1)
+
+        list-style: none
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        transition: all .3s ease-in-out
+
+        z-index: 3
+
+        & > li
+          margin: 5px 40px 5px 0
+          padding-left: 40px
+
+          border-left: 1px solid lighten(lightgrey, 10%)
+
+          cursor: pointer
+
+          z-index: 1000
+
+          &:nth-child(1)
+            border: none
+
+        &.on-hover
+          top: 54px
+
     .wrapper-header
+      max-width: 1060px
+      text-align: center
 
       >h1
         margin-top: 61px
@@ -141,6 +201,8 @@ body
         // 2.6em
         letter-spacing: 1.9px
         text-shadow: 5px 5px 5px rgba(0,0,0,.2)
+
+        z-index: -1
 
       >h3
         text-align: center
