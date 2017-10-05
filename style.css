@@ -114,11 +114,11 @@ body header {
           -o-transition: all .4s ease-in-out;
           transition: all .4s ease-in-out; }
           body header menu .wrapper ul li.menu-normal {
-            letter-spacing: -.7px; }
+            letter-spacing: normal; }
             body header menu .wrapper ul li.menu-normal:hover {
               font-weight: 700;
               color: darkorange;
-              letter-spacing: normal; }
+              letter-spacing: -.5px; }
           body header menu .wrapper ul li.menu-contact {
             border: none;
               border-radius: 3px;
@@ -162,8 +162,10 @@ body .schools .decide {
     height: 420px;
     width: 50%;
     color: white; }
-    body .schools .decide .school > .wrapper {
-      margin-left: 30px; }
+    body .schools .decide .school > .wrapper.one {
+      padding-left: 40px; }
+    body .schools .decide .school > .wrapper.two {
+      padding-right: 40px; }
     body .schools .decide .school.nursery {
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
@@ -291,7 +293,8 @@ body .team {
   text-align: center;
   background: #ededed; }
   body .team > .team-wrapper {
-    width: 1040px;
+    width: 1060px;
+    padding: 0 40px;
     margin: 0 auto;
     display: -webkit-box;
     display: -webkit-flex;
