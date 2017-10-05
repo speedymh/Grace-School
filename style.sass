@@ -85,9 +85,14 @@ body
 
 
         .logo
-          background: grey
+          background: url('images/logo.jpg')
+            size: cover
+            position: center
+
           height: 50px
-          width: 50px
+          width: 52px
+
+          margin: 10px 0
 
         ul
           list-style: none
@@ -104,7 +109,7 @@ body
             color: black
 
             cursor: pointer
-            transition: all .4s ease-in-out
+            transition: all .2s ease-in-out
 
             &.menu-normal
               letter-spacing: normal
@@ -112,9 +117,9 @@ body
               &:hover
                 font-weight: 700
                 color: darkorange
-                letter-spacing: -.5px
+                letter-spacing: -.1px
 
-            &.menu-contact
+            &.menu-login
               border: none
                 radius: 3px
 
@@ -127,21 +132,21 @@ body
               &:hover
                 background: rgb(90, 184, 233)
 
-    .wrapper
+    .wrapper-header
 
       >h1
         margin-top: 61px
 
-        font-size: 4.6em
+        font-size: 2.6em
         // 2.6em
         letter-spacing: 1.9px
-        text-shadow: 5px 5px 5px rgba(0,0,0,.4)
+        text-shadow: 5px 5px 5px rgba(0,0,0,.2)
 
       >h3
         text-align: center
         color: transparentize(white, .15)
         letter-spacing: .5px
-        text-shadow: 5px 5px 5px rgba(0,0,0,.4)
+        text-shadow: 5px 5px 5px rgba(0,0,0,.2)
 
         /* -------- VALUES ------- */
 
@@ -165,11 +170,25 @@ body
         color: white
 
         >.wrapper
+          width: 470px
+          margin: 0
+          padding: 0
+
           &.one
-            padding-left: 40px
+            margin: 0 0 0 40px
+            padding: 0 60px 0 0
 
           &.two
-            padding-right: 40px
+            margin: 0 40px 0 0
+            padding: 0 0 0 60px
+
+          .choice
+            color: white
+            padding: 5px 10px
+            background: transparent
+            border: 1px solid white
+              radius: 3px
+            text-shadow: 3px 3px 3px rgba(0,0,0,.2)
 
         &.nursery
           justify-content: flex-end
@@ -206,16 +225,6 @@ body
 
         &:hover:before
           background: rgba(0,0,0,.7)
-
-        >.wrapper
-          width: 490px
-
-          .choice
-            color: white
-            padding: 5px 10px
-            background: transparent
-            border: 1px solid white
-            text-shadow: 3px 3px 3px rgba(0,0,0,.2)
 
     >.two
       text-align: center
@@ -390,14 +399,15 @@ body
     margin: 120px auto
 
     >button
-      border: 1px solid black
+      border: 2px solid black
+        radius: 3px
       background: black
       color: white
 
       font-size: 1.15em
       letter-spacing: .5px
 
-      padding: 10px 20px
+      padding: 7px 20px
       margin: 7px auto 35px
 
       transition: all .3s ease-in-out
@@ -418,11 +428,11 @@ body
 
       a
         text-decoration: none
-        color: #ee3c00
+        color: darkorange
         // darken(#00a1f1, 1%)
         font-size: .9em
 
-        border-bottom: 2px solid #ee3c00
+        border-bottom: 2px solid darkorange
 
         &.second
           margin-left: 14px
