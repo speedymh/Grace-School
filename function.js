@@ -1,14 +1,26 @@
 $(document).ready(function(){
 
-  $('li.about, ul.about-us').hover(function() {
-    $('.primary').css('boxShadow', '0 0 0 rgba(0,0,0,0)');
-    if($('ul.about-us').hasClass == true) {
-      console.log(true)
-    } else {
-      $('ul.about-us').toggleClass('on-hover');
-  }
+  $('li.about').click(function() {
 
-    // $('ul.about-us').toggleClass('on-hover');
-    // console.log('Hover');
+    $(this).toggleClass('clicked');
+    $('ul.about-us').toggleClass('clicked');
+    $('span.about').toggleClass('clicked');
+
+    $('li.grace').removeClass('clicked');
+    $('ul.grace-schools').removeClass('clicked');
+    $('span.schools').removeClass('clicked');
+  });
+  $('li.grace').click(function() {
+
+    $(this).toggleClass('clicked');
+    $('ul.grace-schools').toggleClass('clicked');
+    $('span.schools').toggleClass('clicked');
+
+    $('li.about').removeClass('clicked');
+    $('ul.about-us').removeClass('clicked');
+    $('span.about').removeClass('clicked');
+  });
+  $('li.menu-contact, li.life').click(function() {
+    $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
   });
 });

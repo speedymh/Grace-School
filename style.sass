@@ -2,6 +2,7 @@
   // primary: Nunito, secondary: Open Sans
   font-family: myfont
   src: url('Open_Sans/OpenSans-Regular.ttf') format('truetype')
+
 .wrapper
   width: 1060px
   padding: 0 40px
@@ -124,8 +125,25 @@ body
                 font-weight: 700
                 color: darkorange
                 letter-spacing: -.1px
-                height: 68px
-                border-bottom: 2px solid darkorange
+
+              &.clicked
+                font-weight: 700
+                color: darkorange
+                letter-spacing: -.1px
+
+              .underline
+                position: absolute
+                bottom: 0px
+                left: 0px
+
+                width: 100%
+                height: 2px
+
+                background: transparent
+
+                &.clicked
+                  background: darkorange
+
 
             &.menu-login
               border: none
@@ -174,6 +192,8 @@ body
 
         z-index: 3
 
+        .about-us
+
         & > li
           margin: 5px 40px 5px 0
           padding-left: 40px
@@ -187,8 +207,12 @@ body
           &:nth-child(1)
             border: none
 
-        &.on-hover
+          &:hover
+            color: darken(darkgrey, 40%)
+
+        &.clicked
           top: 54px
+          z-index: 4
 
     .wrapper-header
       max-width: 1060px
@@ -201,8 +225,6 @@ body
         // 2.6em
         letter-spacing: 1.9px
         text-shadow: 5px 5px 5px rgba(0,0,0,.2)
-
-        z-index: -1
 
       >h3
         text-align: center

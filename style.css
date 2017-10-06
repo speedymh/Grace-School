@@ -132,9 +132,20 @@ body header {
             body header .primary .wrapper .primary-list > li.menu-normal:hover {
               font-weight: 700;
               color: darkorange;
-              letter-spacing: -.1px;
-              height: 68px;
-              border-bottom: 2px solid darkorange; }
+              letter-spacing: -.1px; }
+            body header .primary .wrapper .primary-list > li.menu-normal.clicked {
+              font-weight: 700;
+              color: darkorange;
+              letter-spacing: -.1px; }
+            body header .primary .wrapper .primary-list > li.menu-normal .underline {
+              position: absolute;
+              bottom: 0px;
+              left: 0px;
+              width: 100%;
+              height: 2px;
+              background: transparent; }
+              body header .primary .wrapper .primary-list > li.menu-normal .underline.clicked {
+                background: darkorange; }
           body header .primary .wrapper .primary-list > li.menu-login {
             border: none;
               border-radius: 3px;
@@ -186,8 +197,11 @@ body header {
         z-index: 1000; }
         body header .secondary .secondary-list > li:nth-child(1) {
           border: none; }
-      body header .secondary .secondary-list.on-hover {
-        top: 54px; }
+        body header .secondary .secondary-list > li:hover {
+          color: #434343; }
+      body header .secondary .secondary-list.clicked {
+        top: 54px;
+        z-index: 4; }
   body header .wrapper-header {
     max-width: 1060px;
     text-align: center; }
@@ -195,8 +209,7 @@ body header {
       margin-top: 61px;
       font-size: 2.6em;
       letter-spacing: 1.9px;
-      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-      z-index: -1; }
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
     body header .wrapper-header > h3 {
       text-align: center;
       color: rgba(255, 255, 255, 0.85);
