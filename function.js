@@ -23,4 +23,10 @@ $(document).ready(function(){
   $('li.menu-contact, li.life').click(function() {
     $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
   });
+  $('.menu-normal').click(function(e) {
+    e.stopPropagation();
+  });
+  $(document).click(function(e) {
+    $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
+  });
 });
