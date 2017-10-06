@@ -14,6 +14,10 @@ h3
   bold
     font-weight: 700
 
+a
+  text-decoration: none
+  color: black
+
 *
   z-index: 1
 
@@ -121,12 +125,15 @@ body
             &.menu-normal
               letter-spacing: normal
 
-              &:hover
+              > a
+
+
+              &:hover > a
                 font-weight: 700
                 color: darkorange
                 letter-spacing: -.1px
 
-              &.clicked
+              &.clicked > a
                 font-weight: 700
                 color: darkorange
                 letter-spacing: -.1px
@@ -153,9 +160,11 @@ body
 
               height: 20px
 
-              color: white
               font-size: .9em
               background: rgb(96, 166, 218)
+
+              > a
+                color: white
 
               &:hover
                 background: rgb(90, 184, 233)
@@ -178,8 +187,6 @@ body
 
         background: white
 
-        color: darken(darkgrey, 30%)
-
         box-shadow: 0px 5px 20px rgba(0,0,0,.1)
 
         list-style: none
@@ -191,8 +198,6 @@ body
         transition: all .3s ease-in-out
 
         z-index: 3
-
-        .about-us
 
         & > li
           margin: 5px 40px 5px 0
@@ -207,7 +212,11 @@ body
           &:nth-child(1)
             border: none
 
-          &:hover
+          & > a
+            color: darken(darkgrey, 30%)
+            transition: all .3s ease-in-out
+
+          &:hover > a
             color: darken(darkgrey, 40%)
 
         &.clicked
