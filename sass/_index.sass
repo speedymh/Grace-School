@@ -1,0 +1,85 @@
+body
+  .values
+    text-align: center
+    margin: 120px auto
+
+    /* -------- DECIDE ------- */
+
+  .schools
+    .decide
+      display: flex
+
+      .school
+        display: flex
+        align-items: center
+
+        height: 420px
+        width: 50%
+
+        color: white
+
+        >.wrapper
+          width: 470px
+          margin: 0
+          padding: 0
+
+          &.one
+            margin: 0 0 0 40px
+            padding: 0 60px 0 0
+
+          &.two
+            margin: 0 40px 0 0
+            padding: 0 0 0 60px
+
+          .choice
+            color: white
+            padding: 5px 10px
+            background: transparent
+            border: 1px solid white
+              radius: 3px
+            text-shadow: 3px 3px 3px rgba(0,0,0,.2)
+
+        &.nursery
+          justify-content: flex-end
+
+          background: url('images/nursery-one.jpg')
+            position: center
+            size: cover
+
+        &.primary
+          justify-content: flex-start
+
+          background: url('images/primary.jpg')
+            position: center
+            size: cover
+
+        &.secondary
+          width: 100%
+
+          background: url('images/secondary school.jpg')
+            position: center
+            size: cover
+
+          &::before
+            width: 100%
+
+        &::before
+          background: rgba(0,0,0,.5)
+          content: ''
+          height: 420px
+          width: 50%
+          position: absolute
+
+          transition: all .3s ease-in-out
+
+        &:hover:before
+          background: rgba(0,0,0,.7)
+
+    >.two
+      text-align: center
+      width: 100% !important
+
+      .secondary
+        >.wrapper
+          width: 1060px
+          margin: 0 auto

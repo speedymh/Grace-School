@@ -1,0 +1,80 @@
+body .values {
+  text-align: center;
+  margin: 120px auto;
+  /* -------- DECIDE ------- */ }
+
+body .schools .decide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  body .schools .decide .school {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 420px;
+    width: 50%;
+    color: white; }
+    body .schools .decide .school > .wrapper {
+      width: 470px;
+      margin: 0;
+      padding: 0; }
+      body .schools .decide .school > .wrapper.one {
+        margin: 0 0 0 40px;
+        padding: 0 60px 0 0; }
+      body .schools .decide .school > .wrapper.two {
+        margin: 0 40px 0 0;
+        padding: 0 0 0 60px; }
+      body .schools .decide .school > .wrapper .choice {
+        color: white;
+        padding: 5px 10px;
+        background: transparent;
+        border: 1px solid white;
+          border-radius: 3px;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); }
+    body .schools .decide .school.nursery {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      background: url("images/nursery-one.jpg");
+        background-position: center;
+        background-size: cover; }
+    body .schools .decide .school.primary {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      background: url("images/primary.jpg");
+        background-position: center;
+        background-size: cover; }
+    body .schools .decide .school.secondary {
+      width: 100%;
+      background: url("images/secondary school.jpg");
+        background-position: center;
+        background-size: cover; }
+      body .schools .decide .school.secondary::before {
+        width: 100%; }
+    body .schools .decide .school::before {
+      background: rgba(0, 0, 0, 0.5);
+      content: '';
+      height: 420px;
+      width: 50%;
+      position: absolute;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+    body .schools .decide .school:hover:before {
+      background: rgba(0, 0, 0, 0.7); }
+
+body .schools > .two {
+  text-align: center;
+  width: 100% !important; }
+  body .schools > .two .secondary > .wrapper {
+    width: 1060px;
+    margin: 0 auto; }
