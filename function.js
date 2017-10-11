@@ -29,4 +29,20 @@ $(document).ready(function(){
   $(document).click(function(e) {
     $('li.grace, li.about, ul.about-us, ul.grace-schools, span.schools, span.about').removeClass('clicked');
   });
+
+  // smoothScroll(1000);
 });
+
+// function smoothScroll (duration) {
+//   $('.chevron-down').on('click', function(event) {
+//
+//     var target = $('.values');
+//
+//     if( target.length ) {
+//       event.preventDefault();
+//       $('html, body').animate({
+//         scrollTop: target.offset().top -
+//       }, duration);
+//     }
+//   });
+// }

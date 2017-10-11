@@ -1,14 +1,24 @@
 @font-face {
-  font-family: myfont;
+  font-family: OpenSans;
   src: url("Open_Sans/OpenSans-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: RobotoSlab;
+  src: url("Roboto_Slab/RobotoSlab-Regular.ttf") format("truetype"); }
 
 .wrapper {
   width: 1060px;
   padding: 0 40px;
   margin: 0 auto; }
 
+h1, h2 {
+  font-family: RobotoSlab;
+  font-weight: 700; }
+
 h3 {
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 2em;
+  color: #363636; }
   h3 bold {
     font-weight: 700; }
 
@@ -20,12 +30,12 @@ a {
   z-index: 1; }
 
 html, body {
-  font-family: myfont;
+  font-family: OpenSans;
   margin: 0;
   padding: 0; }
   html header, body header {
     background: transparent;
-    height: 76vh;
+    height: 45vh;
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -45,9 +55,9 @@ html, body {
     -ms-flex-direction: column;
     flex-direction: column;
     color: white;
-    background: url("images/outer.jpg");
+    background: url("images/primary.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: center -120px;
       background-attachment: fixed; }
     html header::before, body header::before {
       position: absolute;
@@ -55,18 +65,19 @@ html, body {
       left: 0;
       background: rgba(0, 0, 0, 0.5);
       width: 100%;
-      height: 76vh;
+      height: 45vh;
       content: ' '; }
     html header .primary, body header .primary {
       position: fixed;
       top: 0px;
       width: 100%;
       color: black;
+      font-size: 1.1em;
       padding: 0;
       margin: 0;
       background: white;
-      -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
       -webkit-transition: all .25s ease-in-out;
       -o-transition: all .25s ease-in-out;
       transition: all .25s ease-in-out;
@@ -90,9 +101,8 @@ html, body {
           background: url("images/logo.jpg");
             background-size: cover;
             background-position: center;
-          height: 50px;
-          width: 52px;
-          margin: 10px 0; }
+          height: 72px;
+          width: 75px; }
         html header .primary .wrapper .primary-list, body header .primary .wrapper .primary-list {
           list-style: none;
           display: -webkit-box;
@@ -111,6 +121,7 @@ html, body {
           html header .primary .wrapper .primary-list > li, body header .primary .wrapper .primary-list > li {
             position: relative;
             margin-left: 40px;
+            padding: 10px 0;
             height: 70px;
             display: -webkit-box;
             display: -webkit-flex;
@@ -132,29 +143,37 @@ html, body {
             transition: all .2s ease-in-out; }
             html header .primary .wrapper .primary-list > li.menu-normal, body header .primary .wrapper .primary-list > li.menu-normal {
               letter-spacing: normal; }
-              html header .primary .wrapper .primary-list > li.menu-normal:hover > a, body header .primary .wrapper .primary-list > li.menu-normal:hover > a {
+              html header .primary .wrapper .primary-list > li.menu-normal:hover, body header .primary .wrapper .primary-list > li.menu-normal:hover {
                 font-weight: 700;
-                color: darkorange;
+                color: #ff6200;
                 letter-spacing: -.1px; }
-              html header .primary .wrapper .primary-list > li.menu-normal.clicked > a, body header .primary .wrapper .primary-list > li.menu-normal.clicked > a {
+                html header .primary .wrapper .primary-list > li.menu-normal:hover > a, body header .primary .wrapper .primary-list > li.menu-normal:hover > a {
+                  font-weight: 700;
+                  color: #ff6200;
+                  letter-spacing: -.1px; }
+              html header .primary .wrapper .primary-list > li.menu-normal.clicked, body header .primary .wrapper .primary-list > li.menu-normal.clicked {
                 font-weight: 700;
-                color: darkorange;
+                color: #ff6200;
                 letter-spacing: -.1px; }
+                html header .primary .wrapper .primary-list > li.menu-normal.clicked > a, body header .primary .wrapper .primary-list > li.menu-normal.clicked > a {
+                  font-weight: 700;
+                  color: #ff6200;
+                  letter-spacing: -.1px; }
               html header .primary .wrapper .primary-list > li.menu-normal .underline, body header .primary .wrapper .primary-list > li.menu-normal .underline {
                 position: absolute;
                 bottom: 0px;
                 left: 0px;
                 width: 100%;
-                height: 2px;
+                height: 2.5px;
                 background: transparent; }
                 html header .primary .wrapper .primary-list > li.menu-normal .underline.clicked, body header .primary .wrapper .primary-list > li.menu-normal .underline.clicked {
-                  background: darkorange; }
+                  background: #ff6200; }
             html header .primary .wrapper .primary-list > li.menu-login, body header .primary .wrapper .primary-list > li.menu-login {
               border: none;
                 border-radius: 3px;
               padding: 5px 17px;
               height: 20px;
-              font-size: .9em;
+              font-size: .92em;
               background: #60a6da; }
               html header .primary .wrapper .primary-list > li.menu-login > a, body header .primary .wrapper .primary-list > li.menu-login > a {
                 color: white; }
@@ -176,6 +195,7 @@ html, body {
         -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
         list-style: none;
+        font-size: 1.1em;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -208,21 +228,22 @@ html, body {
           html header .secondary .secondary-list > li:hover > a, body header .secondary .secondary-list > li:hover > a {
             color: #434343; }
         html header .secondary .secondary-list.clicked, body header .secondary .secondary-list.clicked {
-          top: 54px;
+          top: 73px;
           z-index: 4; }
     html header .wrapper-header, body header .wrapper-header {
       max-width: 1060px;
       text-align: center; }
       html header .wrapper-header > h1, body header .wrapper-header > h1 {
-        margin-top: 61px;
-        font-size: 2.6em;
+        margin-top: 70px;
+        font-size: 4.4em;
         letter-spacing: 1.9px;
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
       html header .wrapper-header > h3, body header .wrapper-header > h3 {
+        font-size: 1.8em;
         text-align: center;
         color: rgba(255, 255, 255, 0.85);
         letter-spacing: .5px;
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
   html .contact, body .contact {
     text-align: center;
     margin: 120px auto; }
@@ -259,9 +280,9 @@ html, body {
       justify-content: space-between; }
       html .contact .contact-wrapper a, body .contact .contact-wrapper a {
         text-decoration: none;
-        color: darkorange;
+        color: #ff6200;
         font-size: .9em;
-        border-bottom: 2px solid darkorange; }
+        border-bottom: 2px solid #ff6200; }
         html .contact .contact-wrapper a.second, body .contact .contact-wrapper a.second {
           margin-left: 14px; }
   html footer, body footer {
@@ -280,6 +301,189 @@ html, body {
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between; }
+
+body .index-header {
+  height: 100vh;
+  background-size: cover;
+  background-position: center -40px; }
+  body .index-header::before {
+    height: 100vh; }
+  body .index-header .wrapper-header > h1 {
+    margin-bottom: 20px; }
+  body .index-header > .chevron-down {
+    position: absolute;
+    bottom: 40px;
+    width: 30px;
+    height: 30px; }
+
+body .values {
+  text-align: center;
+  line-height: 2.9em;
+  margin: 120px auto;
+  /* -------- DECIDE ------- */ }
+
+body .schools .decide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  body .schools .decide .school {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 420px;
+    width: 50%;
+    color: white;
+    cursor: pointer; }
+    body .schools .decide .school > .wrapper {
+      width: 470px;
+      margin: 0;
+      padding: 0; }
+      body .schools .decide .school > .wrapper.one {
+        margin: 0 0 0 40px;
+        padding: 0 60px 0 0; }
+      body .schools .decide .school > .wrapper.two {
+        margin: 0 40px 0 0;
+        padding: 0 0 0 60px; }
+      body .schools .decide .school > .wrapper .choice {
+        color: white;
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        padding: 5px 10px;
+        background: transparent;
+        border: 1px solid white;
+          border-radius: 3px;
+        -webkit-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out; }
+    body .schools .decide .school.nursery {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      background: url("images/nursery-one.jpg");
+        background-position: center;
+        background-size: cover; }
+    body .schools .decide .school.primary {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      background: url("images/primary.jpg");
+        background-position: center;
+        background-size: cover; }
+    body .schools .decide .school.secondary {
+      width: 100%;
+      background: url("images/secondary school.jpg");
+        background-position: center;
+        background-size: cover; }
+      body .schools .decide .school.secondary::before {
+        width: 100%; }
+    body .schools .decide .school:before {
+      background: rgba(0, 0, 0, 0.5);
+      content: '';
+      height: 420px;
+      width: 50%;
+      position: absolute;
+      -webkit-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+    body .schools .decide .school:hover:before {
+      background: rgba(0, 0, 0, 0.7); }
+    body .schools .decide .school:hover .choice {
+      background: white;
+      text-shadow: none;
+      color: black; }
+
+body .schools > .two {
+  text-align: center;
+  width: 100% !important; }
+  body .schools > .two .secondary > .wrapper {
+    width: 1060px;
+    margin: 0 auto; }
+
+body .team {
+  text-align: center;
+  background: #ededed; }
+  body .team > .team-wrapper {
+    width: 1060px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    body .team > .team-wrapper > h2 {
+      margin-top: 120px; }
+    body .team > .team-wrapper h3 {
+      margin-bottom: 50px; }
+    body .team > .team-wrapper .row {
+      height: 300px;
+      width: 100%;
+      background: white;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      body .team > .team-wrapper .row.one {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px; }
+      body .team > .team-wrapper .row.three {
+        margin-bottom: 120px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; }
+      body .team > .team-wrapper .row .column {
+        padding: 0 50px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        width: 100%; }
+        body .team > .team-wrapper .row .column.right {
+          border-left: 1px solid #ededed; }
+        body .team > .team-wrapper .row .column .img {
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          background: url("images/klumberjack.jpg");
+            background-size: cover;
+            background-position: center; }
+        body .team > .team-wrapper .row .column ul {
+          list-style: none; }
 
 body .history {
   margin: 120px auto;
@@ -356,157 +560,12 @@ body .history {
             width: 120px;
             text-align: left; }
 
-body .values {
-  text-align: center;
-  margin: 120px auto;
-  /* -------- DECIDE ------- */ }
+body .nursery-header {
+  background: url("images/nursery-two.jpg");
+    background-size: cover;
+    background-position: center -120px; }
 
-body .schools .decide {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  body .schools .decide .school {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 420px;
-    width: 50%;
-    color: white; }
-    body .schools .decide .school > .wrapper {
-      width: 470px;
-      margin: 0;
-      padding: 0; }
-      body .schools .decide .school > .wrapper.one {
-        margin: 0 0 0 40px;
-        padding: 0 60px 0 0; }
-      body .schools .decide .school > .wrapper.two {
-        margin: 0 40px 0 0;
-        padding: 0 0 0 60px; }
-      body .schools .decide .school > .wrapper .choice {
-        color: white;
-        padding: 5px 10px;
-        background: transparent;
-        border: 1px solid white;
-          border-radius: 3px;
-        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); }
-    body .schools .decide .school.nursery {
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-      justify-content: flex-end;
-      background: url("images/nursery-one.jpg");
-        background-position: center;
-        background-size: cover; }
-    body .schools .decide .school.primary {
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      background: url("images/primary.jpg");
-        background-position: center;
-        background-size: cover; }
-    body .schools .decide .school.secondary {
-      width: 100%;
-      background: url("images/secondary school.jpg");
-        background-position: center;
-        background-size: cover; }
-      body .schools .decide .school.secondary::before {
-        width: 100%; }
-    body .schools .decide .school::before {
-      background: rgba(0, 0, 0, 0.5);
-      content: '';
-      height: 420px;
-      width: 50%;
-      position: absolute;
-      -webkit-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out; }
-    body .schools .decide .school:hover:before {
-      background: rgba(0, 0, 0, 0.7); }
-
-body .schools > .two {
-  text-align: center;
-  width: 100% !important; }
-  body .schools > .two .secondary > .wrapper {
-    width: 1060px;
-    margin: 0 auto; }
-
-body .team {
-  text-align: center;
-  background: #ededed; }
-  body .team > .team-wrapper {
-    width: 1060px;
-    padding: 0 40px;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    body .team > .team-wrapper > h2 {
-      margin-top: 120px; }
-    body .team > .team-wrapper h3 {
-      margin-bottom: 50px; }
-    body .team > .team-wrapper .row {
-      height: 300px;
-      width: 100%;
-      background: white;
-      margin-bottom: 10px;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-      body .team > .team-wrapper .row.three {
-        margin-bottom: 120px; }
-      body .team > .team-wrapper .row .column {
-        padding: 0 50px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        width: 100%; }
-        body .team > .team-wrapper .row .column.right {
-          border-left: 1px solid #ededed; }
-        body .team > .team-wrapper .row .column .img {
-          width: 140px;
-          height: 140px;
-          border-radius: 50%;
-          background: url("images/klumberjack.jpg");
-            background-size: cover;
-            background-position: center; }
-        body .team > .team-wrapper .row .column ul {
-          list-style: none; }
+body .secondary-header {
+  background: url("images/secondary school.jpg");
+    background-size: cover;
+    background-position: center; }

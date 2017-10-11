@@ -1,6 +1,30 @@
 body
+  .index-header
+    height: 100vh
+    // height: 76vh
+
+    background:
+      size: cover
+      position: center -40px
+
+    &::before
+      height: 100vh
+
+    .wrapper-header
+      > h1
+        margin-bottom: 20px
+
+    > .chevron-down
+      position: absolute
+      bottom: 40px
+
+      width: 30px
+      height: 30px
+
   .values
     text-align: center
+    line-height: 2.9em
+
     margin: 120px auto
 
     /* -------- DECIDE ------- */
@@ -18,6 +42,8 @@ body
 
         color: white
 
+        cursor: pointer
+
         >.wrapper
           width: 470px
           margin: 0
@@ -33,11 +59,16 @@ body
 
           .choice
             color: white
+            text-shadow: 3px 3px 3px rgba(0,0,0,.2)
+
             padding: 5px 10px
+
             background: transparent
+
             border: 1px solid white
               radius: 3px
-            text-shadow: 3px 3px 3px rgba(0,0,0,.2)
+
+            transition: all .3s ease-in-out
 
         &.nursery
           justify-content: flex-end
@@ -63,7 +94,7 @@ body
           &::before
             width: 100%
 
-        &::before
+        &:before
           background: rgba(0,0,0,.5)
           content: ''
           height: 420px
@@ -74,6 +105,11 @@ body
 
         &:hover:before
           background: rgba(0,0,0,.7)
+
+        &:hover .choice
+          background: white
+          text-shadow: none
+          color: black
 
     >.two
       text-align: center

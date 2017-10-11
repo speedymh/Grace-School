@@ -1,15 +1,25 @@
 @font-face
   // primary: Nunito, secondary: Open Sans
-  font-family: myfont
+  font-family: OpenSans
   src: url('Open_Sans/OpenSans-Regular.ttf') format('truetype')
+
+@font-face
+  font-family: RobotoSlab
+  src: url('Roboto_Slab/RobotoSlab-Regular.ttf') format('truetype')
 
 .wrapper
   width: 1060px
   padding: 0 40px
   margin: 0 auto
 
+h1, h2
+  font-family: RobotoSlab
+  font-weight: 700
+
 h3
   font-weight: 400
+  font-size: 2em
+  color: #363636
 
   bold
     font-weight: 700
@@ -22,14 +32,15 @@ a
   z-index: 1
 
 html, body
-  font-family: myfont
+  font-family: OpenSans
   margin: 0
   padding: 0
 
   header
     background: transparent
 
-    height: 76vh
+    height: 45vh
+    // height: 76vh
     width: 100%
 
     display: flex
@@ -39,9 +50,9 @@ html, body
 
     color: white
 
-    background: url('images/outer.jpg')
+    background: url('images/primary.jpg')
       size: cover
-      position: center
+      position: center -120px
       attachment: fixed
 
     &::before
@@ -52,7 +63,7 @@ html, body
       background: rgba(0,0,0,.5)
 
       width: 100%
-      height: 76vh
+      height: 45vh
 
       content: ' '
 
@@ -61,13 +72,15 @@ html, body
       top: 0px
 
       width: 100%
+
       color: black
+      font-size: 1.1em
 
       padding: 0
       margin: 0
 
       background: white
-      box-shadow: 0px 5px 20px rgba(0,0,0,.1)
+      box-shadow: 0px 5px 20px rgba(0,0,0,.15)
 
       transition: all .25s ease-in-out
 
@@ -88,10 +101,8 @@ html, body
             size: cover
             position: center
 
-          height: 50px
-          width: 52px
-
-          margin: 10px 0
+          height: 72px
+          width: 75px
 
         .primary-list
           list-style: none
@@ -105,6 +116,7 @@ html, body
             position: relative
 
             margin-left: 40px
+            padding: 10px 0
 
             height: 70px
 
@@ -123,15 +135,25 @@ html, body
             &.menu-normal
               letter-spacing: normal
 
-              &:hover > a
+              &:hover
                 font-weight: 700
-                color: darkorange
+                color: rgb(255, 98, 0)
                 letter-spacing: -.1px
 
-              &.clicked > a
+                & > a
+                  font-weight: 700
+                  color: rgb(255, 98, 0)
+                  letter-spacing: -.1px
+
+              &.clicked
                 font-weight: 700
-                color: darkorange
+                color: rgb(255, 98, 0)
                 letter-spacing: -.1px
+
+                & > a
+                  font-weight: 700
+                  color: rgb(255, 98, 0)
+                  letter-spacing: -.1px
 
               .underline
                 position: absolute
@@ -139,12 +161,12 @@ html, body
                 left: 0px
 
                 width: 100%
-                height: 2px
+                height: 2.5px
 
                 background: transparent
 
                 &.clicked
-                  background: darkorange
+                  background: rgb(255, 98, 0)
 
 
             &.menu-login
@@ -155,7 +177,7 @@ html, body
 
               height: 20px
 
-              font-size: .9em
+              font-size: .92em
               background: rgb(96, 166, 218)
 
               > a
@@ -186,6 +208,8 @@ html, body
 
         list-style: none
 
+        font-size: 1.1em
+
         display: flex
         align-items: center
         justify-content: center
@@ -215,7 +239,7 @@ html, body
             color: darken(darkgrey, 40%)
 
         &.clicked
-          top: 54px
+          top: 73px
           z-index: 4
 
     .wrapper-header
@@ -223,18 +247,19 @@ html, body
       text-align: center
 
       >h1
-        margin-top: 61px
+        margin-top: 70px
 
-        font-size: 2.6em
+        font-size: 4.4em
         // 2.6em
         letter-spacing: 1.9px
-        text-shadow: 5px 5px 5px rgba(0,0,0,.2)
+        text-shadow: 5px 5px 5px rgba(0,0,0,.3)
 
       >h3
+        font-size: 1.8em
         text-align: center
         color: transparentize(white, .15)
         letter-spacing: .5px
-        text-shadow: 5px 5px 5px rgba(0,0,0,.2)
+        text-shadow: 5px 5px 5px rgba(0,0,0,.3)
 
   .contact
     text-align: center
@@ -270,11 +295,11 @@ html, body
 
       a
         text-decoration: none
-        color: darkorange
+        color: rgb(255, 98, 0)
         // darken(#00a1f1, 1%)
         font-size: .9em
 
-        border-bottom: 2px solid darkorange
+        border-bottom: 2px solid rgb(255, 98, 0)
 
         &.second
           margin-left: 14px
