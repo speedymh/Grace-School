@@ -317,10 +317,32 @@ body .index-header {
     height: 30px; }
 
 body .values {
-  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: left;
   line-height: 2.9em;
   margin: 120px auto;
   /* -------- DECIDE ------- */ }
+  body .values .section-title {
+    width: 30%; }
+    body .values .section-title > h4 {
+      margin: 0;
+      color: #ff6200;
+      font-size: 1.5em; }
+  body .values .section-content {
+    width: 70%; }
+    body .values .section-content > h3 {
+      margin: 0; }
 
 body .schools .decide {
   display: -webkit-box;
@@ -343,7 +365,15 @@ body .schools .decide {
     body .schools .decide .school > .wrapper {
       width: 470px;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      color: white; }
+      body .schools .decide .school > .wrapper > h2, body .schools .decide .school > .wrapper h3 {
+        color: white; }
+      body .schools .decide .school > .wrapper > span {
+        position: absolute;
+        width: 120px;
+        height: 3px;
+        background: white; }
       body .schools .decide .school > .wrapper.one {
         margin: 0 0 0 40px;
         padding: 0 60px 0 0; }
