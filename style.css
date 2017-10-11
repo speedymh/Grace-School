@@ -11,7 +11,7 @@
   padding: 0 40px;
   margin: 0 auto; }
 
-h1, h2 {
+h1 {
   font-family: RobotoSlab;
   font-weight: 700; }
 
@@ -165,7 +165,10 @@ html, body {
                 left: 0px;
                 width: 100%;
                 height: 2.5px;
-                background: transparent; }
+                background: transparent;
+                -webkit-transition: all .42s ease-in-out;
+                -o-transition: all .42s ease-in-out;
+                transition: all .42s ease-in-out; }
                 html header .primary .wrapper .primary-list > li.menu-normal .underline.clicked, body header .primary .wrapper .primary-list > li.menu-normal .underline.clicked {
                   background: #ff6200; }
             html header .primary .wrapper .primary-list > li.menu-login, body header .primary .wrapper .primary-list > li.menu-login {
@@ -208,9 +211,9 @@ html, body {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-transition: all .3s ease-in-out;
-        -o-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
+        -webkit-transition: all .42s ease-in-out;
+        -o-transition: all .42s ease-in-out;
+        transition: all .42s ease-in-out;
         z-index: 3; }
         html header .secondary .secondary-list > li, body header .secondary .secondary-list > li {
           margin: 5px 40px 5px 0;
@@ -332,7 +335,7 @@ body .values {
   text-align: left;
   line-height: 2.9em;
   margin: 120px auto;
-  /* -------- DECIDE ------- */ }
+  /* -------- SCHOOLS ------- */ }
   body .values .section-title {
     width: 30%; }
     body .values .section-title > h4 {
@@ -344,12 +347,25 @@ body .values {
     body .values .section-content > h3 {
       margin: 0; }
 
-body .schools .decide {
+body .schools .school {
+  width: 100%;
+  height: 60vh;
+  min-height: 570px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
-  body .schools .decide .school {
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  body .schools .school .description {
+    width: 30%;
+    height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -358,83 +374,126 @@ body .schools .decide {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    height: 420px;
-    width: 50%;
-    color: white;
-    cursor: pointer; }
-    body .schools .decide .school > .wrapper {
-      width: 470px;
-      margin: 0;
-      padding: 0;
-      color: white; }
-      body .schools .decide .school > .wrapper > h2, body .schools .decide .school > .wrapper h3 {
-        color: white; }
-      body .schools .decide .school > .wrapper > span {
-        position: absolute;
-        width: 120px;
-        height: 3px;
-        background: white; }
-      body .schools .decide .school > .wrapper.one {
-        margin: 0 0 0 40px;
-        padding: 0 60px 0 0; }
-      body .schools .decide .school > .wrapper.two {
-        margin: 0 40px 0 0;
-        padding: 0 0 0 60px; }
-      body .schools .decide .school > .wrapper .choice {
-        color: white;
-        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-        padding: 5px 10px;
-        background: transparent;
-        border: 1px solid white;
-          border-radius: 3px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    body .schools .school .description .school-wrapper {
+      width: 258px;
+      overflow: hidden;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -webkit-box-pack: left;
+      -webkit-justify-content: left;
+      -ms-flex-pack: left;
+      justify-content: left;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      body .schools .school .description .school-wrapper > h2 {
+        border-bottom: 2px solid #e1e1e1;
+        padding-bottom: 25px;
+        font-size: 2.2em;
+        font-weight: 200;
+        letter-spacing: .5px; }
+      body .schools .school .description .school-wrapper > h3 {
+        font-size: 1.1em; }
+      body .schools .school .description .school-wrapper .more {
+        margin-top: 45px;
+        padding-bottom: 1px;
+        text-transform: uppercase;
+        font-size: .8em;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        border-bottom: 1.5px solid black;
         -webkit-transition: all .3s ease-in-out;
         -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out; }
-    body .schools .decide .school.nursery {
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-      justify-content: flex-end;
-      background: url("images/nursery-one.jpg");
+        body .schools .school .description .school-wrapper .more:hover {
+          padding-bottom: 5px;
+          margin-top: 41px; }
+  body .schools .school .image {
+    width: 70%;
+    height: 100%; }
+    body .schools .school .image.nursery {
+      background: url("../images/nursery-one.jpg");
+        background-size: cover;
         background-position: center;
-        background-size: cover; }
-    body .schools .decide .school.primary {
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      background: url("images/primary.jpg");
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1; }
+    body .schools .school .image.primary {
+      background: url("../images/primary.jpg");
+        background-size: cover;
         background-position: center;
-        background-size: cover; }
-    body .schools .decide .school.secondary {
-      width: 100%;
-      background: url("images/secondary school.jpg");
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2; }
+    body .schools .school .image.secondary {
+      background: url("../images/secondary school.jpg");
+        background-size: cover;
         background-position: center;
-        background-size: cover; }
-      body .schools .decide .school.secondary::before {
-        width: 100%; }
-    body .schools .decide .school:before {
-      background: rgba(0, 0, 0, 0.5);
-      content: '';
-      height: 420px;
-      width: 50%;
-      position: absolute;
-      -webkit-transition: all .3s ease-in-out;
-      -o-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out; }
-    body .schools .decide .school:hover:before {
-      background: rgba(0, 0, 0, 0.7); }
-    body .schools .decide .school:hover .choice {
-      background: white;
-      text-shadow: none;
-      color: black; }
-
-body .schools > .two {
-  text-align: center;
-  width: 100% !important; }
-  body .schools > .two .secondary > .wrapper {
-    width: 1060px;
-    margin: 0 auto; }
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1; }
+  body .schools .school.nursery .description {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    padding: 0px 0px 0px 30px;
+    background: #811b7e;
+    color: white; }
+    body .schools .school.nursery .description .school-wrapper > h3 {
+      color: white; }
+    body .schools .school.nursery .description .school-wrapper .more {
+      color: white;
+      border-bottom: 1.5px solid white; }
+  body .schools .school.primary .description {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    padding: 0px 30px 0px 0px;
+    background: white;
+    color: black;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    body .schools .school.primary .description .school-wrapper > h2 {
+      border-bottom: 2px solid #e1e1e1; }
+    body .schools .school.primary .description .school-wrapper > h3 {
+      color: #707070; }
+    body .schools .school.primary .description .school-wrapper .more {
+      color: black;
+      border-bottom: 1.5px solid black; }
+  body .schools .school.secondary .description {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    padding: 0px 0px 0px 30px;
+    background: white;
+    color: black; }
+    body .schools .school.secondary .description .school-wrapper > h2 {
+      border-bottom: 2px solid #e1e1e1; }
+    body .schools .school.secondary .description .school-wrapper > h3 {
+      color: #707070; }
+    body .schools .school.secondary .description .school-wrapper .more {
+      color: black;
+      border-bottom: 1.5px solid black; }
 
 body .team {
   text-align: center;
@@ -594,6 +653,10 @@ body .nursery-header {
   background: url("images/nursery-two.jpg");
     background-size: cover;
     background-position: center -120px; }
+  body .nursery-header .wrapper-header > h1 {
+    font-weight: 100;
+    font-size: 3em;
+    border-bottom: 4px solid white; }
 
 body .secondary-header {
   background: url("images/secondary school.jpg");
