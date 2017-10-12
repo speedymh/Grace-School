@@ -27,23 +27,92 @@ body
     justify-content: center
 
     text-align: left
-    line-height: 2.9em
 
-    margin: 120px auto
+    margin: 100px auto
+
+    &.contact
+      align-items: flex-start
 
     .section-title
       width: 30%
 
       > h4
         margin: 0
+
         color: $primary
         font-size: 1.5em
+        letter-spacing: .3px
+        font-weight: 800
+
+        &.contact
+          color: $dark
 
     .section-content
       width: 70%
 
+      &.contact
+        display: flex
+        align-items: center
+        justify-content: space-between
+
       > h3
         margin: 0
+
+        &.mission-text
+          color: $dark
+
+          margin-bottom: 70px
+
+      .author
+        display: flex
+        align-items: center
+
+        margin-top: -12px
+
+        > h5
+          color: $dark
+          text-transform: uppercase
+
+        .horizontal
+          display: table
+
+          width: 90px
+          height: 1.2px
+
+          background: $light
+
+          margin-right: 20px
+
+      .academics-list
+        margin: 40px 0 35px
+        padding: 0
+
+        list-style: none
+
+        > li
+          margin: 0
+          padding: 0
+
+          font-size: 1.2em
+          color: lighten(black, 20%)
+          line-height: 1.6em
+
+          .chevron-right
+            transform: rotateZ(-90deg)
+            width: 10px
+            height: 10px
+
+      .more-schools
+        padding: 15px 30px
+        background: $primary
+        color: white
+
+        font-size: 1.1em
+
+        transition: all .3s ease-in-out
+
+        &:hover
+          background: black
 
     /* -------- SCHOOLS ------- */
 
@@ -75,7 +144,7 @@ body
           flex-direction: column
 
           > h2
-            border-bottom: 2px solid #e1e1e1
+            border-bottom: 2px solid $light
             padding-bottom: 25px
 
             font-size: 2.2em
@@ -87,19 +156,8 @@ body
 
           .more
             margin-top: 45px
-            padding-bottom: 1px
-
-            text-transform: uppercase
-            font-size: .8em
-            font-weight: 700
-            letter-spacing: 1.2px
-
-            border-bottom: 1.5px solid black
-
-            transition: all .3s ease-in-out
 
             &:hover
-              padding-bottom: 5px
               margin-top: 41px
 
       .image
@@ -155,26 +213,28 @@ body
 
           padding: 0px 30px 0px 0px
 
-          background: white
+          background: #79978f
 
-          color: black
+          color: white
 
           justify-content: flex-end
 
           .school-wrapper
             > h2
-              border-bottom: 2px solid #e1e1e1
+              border-bottom: 2px solid $light
 
             > h3
-              color: #707070
+              color: white
 
             .more
-              color: black
+              color: white
 
-              border-bottom: 1.5px solid black
+              border-bottom: 1.5px solid white
 
       &.secondary
         .description
+          position: relative
+
           order: 2
 
           padding: 0px 0px 0px 30px
@@ -183,14 +243,40 @@ body
 
           color: black
 
+          .border-bottom
+            position: absolute
+            bottom: 0px
+            right: 0px
+
+            height: 2px
+            width: 100%
+
+            background: $light
+
           .school-wrapper
             > h2
-              border-bottom: 2px solid #e1e1e1
+              border-bottom: 2px solid $light
 
             > h3
-              color: #707070
+              color: $dark
 
             .more
               color: black
 
               border-bottom: 1.5px solid black
+
+  .orphans
+    background: #111111
+    color: white
+
+    padding: 60px 0
+
+    text-align: center
+
+    .wrapper
+      > h4
+        font-size: 2em
+
+      > h3
+        font-size: 1.5em
+        color: #acacac
